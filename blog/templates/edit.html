@@ -1,0 +1,10 @@
+<div style="margin: 100px 1400px 100px 100px; padding:50px; background-color:azure; position:absolute;">
+<h1>수정하기</h1>
+<form action="{%url 'update' blog.id %}" method="post">
+    {%csrf_token%}
+    <p>Title: <input type="text" name="title" id=""" value="{{blog.title}}""></p>
+    Contents: <textarea name="contents" id="" cols="40" rows="10">{{blog.contents}}</textarea>
+    ㅤ<br>
+    <button type="submit">제출</button>
+</form>
+</div>
